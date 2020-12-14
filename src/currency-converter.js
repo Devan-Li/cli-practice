@@ -76,7 +76,7 @@
     process.exit();
     }
 
-   console.log('The following  currencies are valid',initialCurrency, targetCurrency)
+   console.log('The following currencies are valid',initialCurrency, targetCurrency)
 
 
 // --------------------------------------------------
@@ -86,7 +86,10 @@
 // information, and that a rate exists for each of the currencies.
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
-
+   var rate = rates[initialCurrency][targetCurrency];
+   console.log('the rate is: ', rate);
+   var result = amount * rate;
+   console.log('the amount is: ', result); 
 
 
 // --------------------------------------------------
