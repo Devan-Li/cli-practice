@@ -9,7 +9,7 @@
 // valid finished product.
 
    var { validateUserInput } = require('./validate-user-input');
-
+   var { getRate } = require('./get-rate');
 // --------------------------------------------------
 // Step 1: Capture user input
 // --------------------------------------------------
@@ -75,7 +75,7 @@ validateUserInput(amount, initialCurrency, targetCurrency);
 // information, and that a rate exists for each of the currencies.
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
-   var rate = rates[initialCurrency][targetCurrency];
+   var rate = getRate(rates, initialCurrency, targetCurrency);
    var result = amount * rate;
 
 // --------------------------------------------------
