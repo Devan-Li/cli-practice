@@ -96,6 +96,7 @@
 // Step 6: Display results
 // --------------------------------------------------
 // Finally we will display the result as part of a meaningful message.
-
+ 
 // This message should also include the original amount and currency information
 // supplied by the user.
+   console.log(`Successfully converted ${amount} ${initialCurrency} into ${result} ${targetCurrency}.`);
