@@ -14,7 +14,13 @@
 // In this step we will capture the command line  information supplied by the user.
 
 // We will store each piece of information in a dedicated variable for later use.
+   var amount = process.argv[2]; //first input
+   var initialCurrency = process.argv[3];//second input
+   var targetCurrency = process.argv[4]; //Final
 
+   console.log('the amount is ',amount);
+   console.log('the initialCurrency is ',initialCurrency);
+   console.log('the targetCurrency is ',targetCurrency);  
 
 
 // --------------------------------------------------
