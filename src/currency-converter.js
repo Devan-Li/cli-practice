@@ -66,7 +66,17 @@
 
 // If the user supplies an invalid initial or target currency, display a meaningful
 // warning message and exit the program.
+   if(rates[initialCurrency] === undefined){
+    console.log('Either the initial or target currency is invalid',initialCurrency); 
+    process.exit();
+    }
 
+   if(rates[initialCurrency]!==undefined && rates[initialCurrency][targetCurrency] === undefined){
+    console.log('The target currency provided is invalid',targetCurrency);
+    process.exit();
+    }
+
+   console.log('The following  currencies are valid',initialCurrency, targetCurrency)
 
 
 // --------------------------------------------------
