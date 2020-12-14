@@ -16,12 +16,7 @@
 // We will store each piece of information in a dedicated variable for later use.
    var amount = process.argv[2]; //first input
    var initialCurrency = process.argv[3];//second input
-   var targetCurrency = process.argv[4]; //Final
-
-   console.log('the amount is ',amount);
-   console.log('the initialCurrency is ',initialCurrency);
-   console.log('the targetCurrency is ',targetCurrency);  
-
+   var targetCurrency = process.argv[4]; //Final 
 
 // --------------------------------------------------
 // Step 2: Validate user input
@@ -31,9 +26,7 @@
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
    if(amount === undefined || initialCurrency === undefined || targetCurrency === undefined){
-    console.log('you forgot to provide the amount, initial currency, or target currency.');
 }
-
 
 // --------------------------------------------------
 // Step 3: Define currency conversion rates
@@ -54,9 +47,6 @@
         USD: 0.5,
     },
    };
-   console.log(rates);
-   console.log(rates[initialCurrency]);
-   console.log(rates[initialCurrency][targetCurrency]);
 
 // --------------------------------------------------
 // Step 4: Ensure that a conversion rate exists
@@ -76,9 +66,6 @@
     process.exit();
     }
 
-   console.log('The following currencies are valid',initialCurrency, targetCurrency)
-
-
 // --------------------------------------------------
 // Step 5: Perform conversion
 // --------------------------------------------------
@@ -87,10 +74,7 @@
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
    var rate = rates[initialCurrency][targetCurrency];
-   console.log('the rate is: ', rate);
    var result = amount * rate;
-   console.log('the amount is: ', result); 
-
 
 // --------------------------------------------------
 // Step 6: Display results
